@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>KingPass</title>
+  <link rel="stylesheet" href="./src/css/bootstrap.min.css">
+</head>
+
+<body class="bg-dark">
+  <div class="shadow-lg p-2 mb-5 bg-light rounded mt-2 ml-2 mr-2">
+    <a class="navbar-brand text-success"><strong>KingPass</strong></a>
+    <div class="btn-group float-right" role="group" aria-label="Exemplo básico">
+      <button type="button" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg"
+          enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="20px" height="20px">
+          <g>
+            <rect fill="none" height="24" width="24" />
+          </g>
+          <g>
+            <g>
+              <path
+                d="M18,13H6c-0.55,0-1-0.45-1-1l0,0c0-0.55,0.45-1,1-1h12c0.55,0,1,0.45,1,1l0,0C19,12.55,18.55,13,18,13z" />
+            </g>
+          </g>
+        </svg></button>
+      <button type="button" class="btn btn-warning"><svg xmlns="http://www.w3.org/2000/svg"
+          enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="20px" height="20px">
+          <g>
+            <path d="M0,0h24v24H0V0z" fill="none" />
+          </g>
+          <g>
+            <g>
+              <g>
+                <path
+                  d="M6,14L6,14c-0.55,0-1,0.45-1,1v3c0,0.55,0.45,1,1,1h3c0.55,0,1-0.45,1-1l0,0c0-0.55-0.45-1-1-1H7v-2 C7,14.45,6.55,14,6,14z M6,10L6,10c0.55,0,1-0.45,1-1V7h2c0.55,0,1-0.45,1-1l0,0c0-0.55-0.45-1-1-1H6C5.45,5,5,5.45,5,6v3 C5,9.55,5.45,10,6,10z M17,17h-2c-0.55,0-1,0.45-1,1l0,0c0,0.55,0.45,1,1,1h3c0.55,0,1-0.45,1-1v-3c0-0.55-0.45-1-1-1l0,0 c-0.55,0-1,0.45-1,1V17z M14,6L14,6c0,0.55,0.45,1,1,1h2v2c0,0.55,0.45,1,1,1l0,0c0.55,0,1-0.45,1-1V6c0-0.55-0.45-1-1-1h-3 C14.45,5,14,5.45,14,6z" />
+              </g>
+            </g>
+          </g>
+        </svg></button>
+      <button type="button" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg"
+          enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="20px" height="20px">
+          <g>
+            <rect fill="none" height="24" width="24" />
+          </g>
+          <g>
+            <g>
+              <path
+                d="M18.3,5.71L18.3,5.71c-0.39-0.39-1.02-0.39-1.41,0L12,10.59L7.11,5.7c-0.39-0.39-1.02-0.39-1.41,0l0,0 c-0.39,0.39-0.39,1.02,0,1.41L10.59,12L5.7,16.89c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,0.39,1.02,0.39,1.41,0L12,13.41l4.89,4.89 c0.39,0.39,1.02,0.39,1.41,0l0,0c0.39-0.39,0.39-1.02,0-1.41L13.41,12l4.89-4.89C18.68,6.73,18.68,6.09,18.3,5.71z" />
+            </g>
+          </g>
+        </svg></button>
+    </div>
+    <button type="button" class="btn btn-success float-right mr-2" onclick="modal('open','new_pass_modal')">Nova senha</button>
+  </div>
+
+  <div id="Arewaa">
+
+  </div>
+
+  <!-- Modais -->
+  <div id="new_pass_modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded">
+        <div class="modal-body bg-dark">
+          <h5 class="card-title text-white">Nova senha</h5>
+          <label for="recipient-name" class="col-form-label text-light">Usuario:</label>
+          <input id="new_pass_user" type="text" class="form-control mb-1" placeholder="Digite o nome de usuario" aria-label="Usuário"
+            aria-describedby="basic-addon1">
+            <label for="recipient-name" class="col-form-label text-light">Senha:</label>
+          <input id="new_pass_pass" type="text" class="form-control mb-1" placeholder="Digite a senha ou gere uma abaixo" aria-label="Senha"
+            aria-describedby="basic-addon1">
+          <div class="input-group mb-1">
+            <input type="number" class="form-control" placeholder="Tamanho da senha maximo: 40" aria-label="Tamanho da senha   Max: 40"
+              aria-describedby="button-addon2" min="1" max="40" id="pass_lenght">
+            <div class="input-group-append">
+              <button class="btn btn-secundary" type="button" onclick="gen_password()">Gerar</button>
+            </div>
+          </div>
+          <label for="recipient-name" class="col-form-label text-light">Nome da aplicação:</label>
+          <input type="text" class="form-control mb-1"
+            placeholder="Ex: Youtube, Google, EpcGames, etc." id="new_pass_local"
+            aria-describedby="basic-addon3">
+          <div id="new_pass_alerts">
+
+          </div>
+          <button type="button" class="btn btn-success" onclick="New_Password()">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./src/js/jquery.min.js"></script>
+  <script src="./src/js/bootstrap.min.js"></script>
+  <script src="./src/js/popper.min.js"></script>
+  <script src="./src/js/aes.js"></script>
+  <script src="./src/js/kingpass.js"></script>
+</body>
+
+</html>
