@@ -5,56 +5,220 @@
   <meta charset="UTF-8">
   <title>KingPass</title>
   <link rel="stylesheet" href="./src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./src/css/king_style.css">
 </head>
 
-<body class="bg-dark">
-  <div class="shadow-lg p-2 mb-5 bg-light rounded mt-2 ml-2 mr-2">
-    <a class="navbar-brand text-success"><strong>KingPass</strong></a>
-    <div class="btn-group float-right" role="group" aria-label="Exemplo básico">
-      <button type="button" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg"
-          enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="20px" height="20px">
-          <g>
-            <rect fill="none" height="24" width="24" />
-          </g>
-          <g>
-            <g>
-              <path
-                d="M18,13H6c-0.55,0-1-0.45-1-1l0,0c0-0.55,0.45-1,1-1h12c0.55,0,1,0.45,1,1l0,0C19,12.55,18.55,13,18,13z" />
-            </g>
-          </g>
-        </svg></button>
-      <button type="button" class="btn btn-warning"><svg xmlns="http://www.w3.org/2000/svg"
-          enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="20px" height="20px">
-          <g>
-            <path d="M0,0h24v24H0V0z" fill="none" />
-          </g>
-          <g>
-            <g>
-              <g>
-                <path
-                  d="M6,14L6,14c-0.55,0-1,0.45-1,1v3c0,0.55,0.45,1,1,1h3c0.55,0,1-0.45,1-1l0,0c0-0.55-0.45-1-1-1H7v-2 C7,14.45,6.55,14,6,14z M6,10L6,10c0.55,0,1-0.45,1-1V7h2c0.55,0,1-0.45,1-1l0,0c0-0.55-0.45-1-1-1H6C5.45,5,5,5.45,5,6v3 C5,9.55,5.45,10,6,10z M17,17h-2c-0.55,0-1,0.45-1,1l0,0c0,0.55,0.45,1,1,1h3c0.55,0,1-0.45,1-1v-3c0-0.55-0.45-1-1-1l0,0 c-0.55,0-1,0.45-1,1V17z M14,6L14,6c0,0.55,0.45,1,1,1h2v2c0,0.55,0.45,1,1,1l0,0c0.55,0,1-0.45,1-1V6c0-0.55-0.45-1-1-1h-3 C14.45,5,14,5.45,14,6z" />
-              </g>
-            </g>
-          </g>
-        </svg></button>
-      <button type="button" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg"
-          enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="20px" height="20px">
-          <g>
-            <rect fill="none" height="24" width="24" />
-          </g>
-          <g>
-            <g>
-              <path
-                d="M18.3,5.71L18.3,5.71c-0.39-0.39-1.02-0.39-1.41,0L12,10.59L7.11,5.7c-0.39-0.39-1.02-0.39-1.41,0l0,0 c-0.39,0.39-0.39,1.02,0,1.41L10.59,12L5.7,16.89c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,0.39,1.02,0.39,1.41,0L12,13.41l4.89,4.89 c0.39,0.39,1.02,0.39,1.41,0l0,0c0.39-0.39,0.39-1.02,0-1.41L13.41,12l4.89-4.89C18.68,6.73,18.68,6.09,18.3,5.71z" />
-            </g>
-          </g>
-        </svg></button>
+<body class="bg-KING">
+  <!-- Conteudo da pag de registramento de dados inicial -->
+  <div id="Register_Content" hidden>
+    <div class="shadow-lg p-2 mb-4 bg-king rounded mt-2 ml-2 mr-2">
+      <div class="row mx-md-n5">
+        <div class="col" style="-webkit-app-region: drag;"><a
+            class="navbar-brand text-success"><strong>KingPass</strong></a></div>
+        <div class="mr-4">
+          <div class="btn-group float-right" role="group" aria-label="Exemplo básico">
+            <button type="button" class="btn btn-success" onclick="window_control('minimize')"><svg
+                xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
+                width="20px" height="20px">
+                <g>
+                  <rect fill="none" height="24" width="24" />
+                </g>
+                <g>
+                  <g>
+                    <path
+                      d="M18,13H6c-0.55,0-1-0.45-1-1l0,0c0-0.55,0.45-1,1-1h12c0.55,0,1,0.45,1,1l0,0C19,12.55,18.55,13,18,13z" />
+                  </g>
+                </g>
+              </svg></button>
+              <button type="button" class="btn btn-warning resize_button" onclick="window_control('resize')"><svg
+                xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
+                width="20px" height="20px">
+                <g>
+                  <path d="M0,0h24v24H0V0z" fill="none" />
+                </g>
+                <g>
+                  <g>
+                    <g>
+                      <path
+                        d="M6,14L6,14c-0.55,0-1,0.45-1,1v3c0,0.55,0.45,1,1,1h3c0.55,0,1-0.45,1-1l0,0c0-0.55-0.45-1-1-1H7v-2 C7,14.45,6.55,14,6,14z M6,10L6,10c0.55,0,1-0.45,1-1V7h2c0.55,0,1-0.45,1-1l0,0c0-0.55-0.45-1-1-1H6C5.45,5,5,5.45,5,6v3 C5,9.55,5.45,10,6,10z M17,17h-2c-0.55,0-1,0.45-1,1l0,0c0,0.55,0.45,1,1,1h3c0.55,0,1-0.45,1-1v-3c0-0.55-0.45-1-1-1l0,0 c-0.55,0-1,0.45-1,1V17z M14,6L14,6c0,0.55,0.45,1,1,1h2v2c0,0.55,0.45,1,1,1l0,0c0.55,0,1-0.45,1-1V6c0-0.55-0.45-1-1-1h-3 C14.45,5,14,5.45,14,6z" />
+                    </g>
+                  </g>
+                </g>
+              </svg></button>
+            <button type="button" class="btn btn-danger" onclick="window_control('close')"><svg
+                xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
+                width="20px" height="20px">
+                <g>
+                  <rect fill="none" height="24" width="24" />
+                </g>
+                <g>
+                  <g>
+                    <path
+                      d="M18.3,5.71L18.3,5.71c-0.39-0.39-1.02-0.39-1.41,0L12,10.59L7.11,5.7c-0.39-0.39-1.02-0.39-1.41,0l0,0 c-0.39,0.39-0.39,1.02,0,1.41L10.59,12L5.7,16.89c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,0.39,1.02,0.39,1.41,0L12,13.41l4.89,4.89 c0.39,0.39,1.02,0.39,1.41,0l0,0c0.39-0.39,0.39-1.02,0-1.41L13.41,12l4.89-4.89C18.68,6.73,18.68,6.09,18.3,5.71z" />
+                  </g>
+                </g>
+              </svg></button>
+          </div>
+        </div>
+      </div>
     </div>
-    <button type="button" class="btn btn-success float-right mr-2" onclick="modal('open','new_pass_modal')">Nova senha</button>
+    <div class="shadow-lg p-2 bg-king rounded forms_center text-center">
+      <img class="mb-1" src="./icon.png" alt="" width="72" height="72"> 
+      <h3 class="text-success">KingPass</h3>
+      <p align="justify" class="text-light">Seja bem vindo ao KingPass, aqui você irá registrar uma senha de segurança para seu app, nunca esqueça esta senha, pois sem ela você não tem acesso a suas senhas salvas aqui!</p>
+      <input type="text" class="form-control mt-3" placeholder="Digite uma senha de 8 a 20 caracteres" aria-label="Digite uma senha"
+        aria-describedby="basic-addon1" id="new_pass_register">
+      <input type="text" class="form-control mt-2" placeholder="Digite a senha novamente" aria-label="Digite a senha novamente"
+        aria-describedby="basic-addon1" id="confirm_pass_register">
+      <div id="alert_zone_register"></div>
+      <button class="btn btn-success mt-2 text-black w-100" id="entrar_register" onclick="register()">Registar</button>
+    </div>
   </div>
 
-  <div id="Arewaa">
+  <!-- Abaixo fica o conteudo da pagina de login -->
+  <div id="Login_Content" hidden>
+    <div class="shadow-lg p-2 mb-4 bg-king rounded mt-2 ml-2 mr-2">
+      <div class="row mx-md-n5">
+        <div class="col" style="-webkit-app-region: drag;"><a
+            class="navbar-brand text-success"><strong>KingPass</strong></a></div>
+        <div class="mr-4">
+          <div class="btn-group float-right" role="group" aria-label="Exemplo básico">
+            <button type="button" class="btn btn-success" onclick="window_control('minimize')"><svg
+                xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
+                width="20px" height="20px">
+                <g>
+                  <rect fill="none" height="24" width="24" />
+                </g>
+                <g>
+                  <g>
+                    <path
+                      d="M18,13H6c-0.55,0-1-0.45-1-1l0,0c0-0.55,0.45-1,1-1h12c0.55,0,1,0.45,1,1l0,0C19,12.55,18.55,13,18,13z" />
+                  </g>
+                </g>
+              </svg></button>
+            <button type="button" class="btn btn-warning resize_button" onclick="window_control('resize')"><svg
+                xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
+                width="20px" height="20px">
+                <g>
+                  <path d="M0,0h24v24H0V0z" fill="none" />
+                </g>
+                <g>
+                  <g>
+                    <g>
+                      <path
+                        d="M6,14L6,14c-0.55,0-1,0.45-1,1v3c0,0.55,0.45,1,1,1h3c0.55,0,1-0.45,1-1l0,0c0-0.55-0.45-1-1-1H7v-2 C7,14.45,6.55,14,6,14z M6,10L6,10c0.55,0,1-0.45,1-1V7h2c0.55,0,1-0.45,1-1l0,0c0-0.55-0.45-1-1-1H6C5.45,5,5,5.45,5,6v3 C5,9.55,5.45,10,6,10z M17,17h-2c-0.55,0-1,0.45-1,1l0,0c0,0.55,0.45,1,1,1h3c0.55,0,1-0.45,1-1v-3c0-0.55-0.45-1-1-1l0,0 c-0.55,0-1,0.45-1,1V17z M14,6L14,6c0,0.55,0.45,1,1,1h2v2c0,0.55,0.45,1,1,1l0,0c0.55,0,1-0.45,1-1V6c0-0.55-0.45-1-1-1h-3 C14.45,5,14,5.45,14,6z" />
+                    </g>
+                  </g>
+                </g>
+              </svg></button>
+            <button type="button" class="btn btn-danger" onclick="window_control('close')"><svg
+                xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
+                width="20px" height="20px">
+                <g>
+                  <rect fill="none" height="24" width="24" />
+                </g>
+                <g>
+                  <g>
+                    <path
+                      d="M18.3,5.71L18.3,5.71c-0.39-0.39-1.02-0.39-1.41,0L12,10.59L7.11,5.7c-0.39-0.39-1.02-0.39-1.41,0l0,0 c-0.39,0.39-0.39,1.02,0,1.41L10.59,12L5.7,16.89c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,0.39,1.02,0.39,1.41,0L12,13.41l4.89,4.89 c0.39,0.39,1.02,0.39,1.41,0l0,0c0.39-0.39,0.39-1.02,0-1.41L13.41,12l4.89-4.89C18.68,6.73,18.68,6.09,18.3,5.71z" />
+                  </g>
+                </g>
+              </svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shadow-lg p-2 bg-king rounded forms_center text-center">
+      <img class="mb-1" src="./icon.png" alt="" width="72" height="72"> 
+      <h3 class="text-success">KingPass</h3>
+      <input type="text" class="form-control mt-5" placeholder="Digite sua senha" aria-label="Digite sua senha"
+        aria-describedby="basic-addon1" id="pass_login">
+      <div id="alert_zone_login"></div>
+      <button class="btn btn-success mt-2 text-black w-100" id="entrar_login" onclick="login()">Entrar</button>
+    </div>
+  </div>
 
+  <!-- Abaixo o conteudo da pagina principal -->
+  <div id="Home_Content" hidden>
+    <div class="shadow-lg p-2 mb-4 bg-king rounded mt-2 ml-2 mr-2">
+      <div class="row mx-md-n5">
+        <div class="col" style="-webkit-app-region: drag;"><a
+            class="navbar-brand text-success"><strong>KingPass</strong></a></div>
+        <div class="mr-4">
+          <div class="btn-group float-right" role="group" aria-label="Exemplo básico">
+            <button type="button" class="btn btn-success" onclick="window_control('minimize')"><svg
+                xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
+                width="20px" height="20px">
+                <g>
+                  <rect fill="none" height="24" width="24" />
+                </g>
+                <g>
+                  <g>
+                    <path
+                      d="M18,13H6c-0.55,0-1-0.45-1-1l0,0c0-0.55,0.45-1,1-1h12c0.55,0,1,0.45,1,1l0,0C19,12.55,18.55,13,18,13z" />
+                  </g>
+                </g>
+              </svg></button>
+              <button type="button" class="btn btn-warning resize_button" onclick="window_control('resize')"><svg
+                xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
+                width="20px" height="20px">
+                <g>
+                  <path d="M0,0h24v24H0V0z" fill="none" />
+                </g>
+                <g>
+                  <g>
+                    <g>
+                      <path
+                        d="M6,14L6,14c-0.55,0-1,0.45-1,1v3c0,0.55,0.45,1,1,1h3c0.55,0,1-0.45,1-1l0,0c0-0.55-0.45-1-1-1H7v-2 C7,14.45,6.55,14,6,14z M6,10L6,10c0.55,0,1-0.45,1-1V7h2c0.55,0,1-0.45,1-1l0,0c0-0.55-0.45-1-1-1H6C5.45,5,5,5.45,5,6v3 C5,9.55,5.45,10,6,10z M17,17h-2c-0.55,0-1,0.45-1,1l0,0c0,0.55,0.45,1,1,1h3c0.55,0,1-0.45,1-1v-3c0-0.55-0.45-1-1-1l0,0 c-0.55,0-1,0.45-1,1V17z M14,6L14,6c0,0.55,0.45,1,1,1h2v2c0,0.55,0.45,1,1,1l0,0c0.55,0,1-0.45,1-1V6c0-0.55-0.45-1-1-1h-3 C14.45,5,14,5.45,14,6z" />
+                    </g>
+                  </g>
+                </g>
+              </svg></button>
+            <button type="button" class="btn btn-danger" onclick="window_control('close')"><svg
+                xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
+                width="20px" height="20px">
+                <g>
+                  <rect fill="none" height="24" width="24" />
+                </g>
+                <g>
+                  <g>
+                    <path
+                      d="M18.3,5.71L18.3,5.71c-0.39-0.39-1.02-0.39-1.41,0L12,10.59L7.11,5.7c-0.39-0.39-1.02-0.39-1.41,0l0,0 c-0.39,0.39-0.39,1.02,0,1.41L10.59,12L5.7,16.89c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,0.39,1.02,0.39,1.41,0L12,13.41l4.89,4.89 c0.39,0.39,1.02,0.39,1.41,0l0,0c0.39-0.39,0.39-1.02,0-1.41L13.41,12l4.89-4.89C18.68,6.73,18.68,6.09,18.3,5.71z" />
+                  </g>
+                </g>
+              </svg></button>
+          </div>
+          <button type="button" class="btn btn-success float-right mr-2 text-black"
+            onclick="modal('open','new_pass_modal')">Nova
+            senha</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zona de alerta da home serve para colocar alertas na pagina princital -->
+    <div id="alert_zone_home"></div> 
+
+    <div class="shadow-lg p-2 mb-4 bg-king rounded ml-2 mr-2">
+      <div class="row ml-2 mr-2">
+
+        <div class="col-md-3 pl-2 pr-2">
+          <div class="card bg-card">
+            <div class="card-body">
+              <h5 class="card-title text-white">Youtube</h5>
+              <p class="card-text text-light mb-0"><strong>Usuario: </strong>TiagoMatinelli</p>
+              <p class="card-text text-light"><strong>Senha: </strong>OCULA</p>
+              <div class="btn-group" role="group" aria-label="Exemplo básico">
+                <button type="button" class="btn btn-outline-success" onclick=""><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="20px" height="20px"><g><rect fill="none" height="24" width="24" y="0"/></g><g><g><path d="M12,4C7.31,4,3.26,6.74,1.35,10.7c-0.24,0.5-0.24,1.1,0,1.6C3.26,16.26,7.31,19,12,19s8.74-2.74,10.65-6.7 c0.24-0.5,0.24-1.1,0-1.6C20.74,6.74,16.69,4,12,4z M12,16c-2.48,0-4.5-2.02-4.5-4.5S9.52,7,12,7s4.5,2.02,4.5,4.5S14.48,16,12,16 z"/><circle cx="12" cy="11.5" r="2.7"/></g></g></svg></button>
+                <button type="button" class="btn btn-outline-success" onclick=""><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="20px" height="20px"><g><rect fill="none" height="24" width="24"/></g><g><path d="M15,20H5V7c0-0.55-0.45-1-1-1h0C3.45,6,3,6.45,3,7v13c0,1.1,0.9,2,2,2h10c0.55,0,1-0.45,1-1v0C16,20.45,15.55,20,15,20z M20,16V4c0-1.1-0.9-2-2-2H9C7.9,2,7,2.9,7,4v12c0,1.1,0.9,2,2,2h9C19.1,18,20,17.1,20,16z M18,16H9V4h9V16z"/></g></svg></button>
+                <button type="button" class="btn btn-outline-success" onclick=""><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="20px" height="20px"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M3,17.46l0,3.04C3,20.78,3.22,21,3.5,21h3.04c0.13,0,0.26-0.05,0.35-0.15L17.81,9.94l-3.75-3.75L3.15,17.1 C3.05,17.2,3,17.32,3,17.46z"/></g><g><path d="M20.71,5.63l-2.34-2.34c-0.39-0.39-1.02-0.39-1.41,0l-1.83,1.83l3.75,3.75l1.83-1.83C21.1,6.65,21.1,6.02,20.71,5.63z"/></g></g></g></svg></button>
+                <button type="button" class="btn btn-outline-success" onclick=""><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="20px" height="20px"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><path d="M6,19c0,1.1,0.9,2,2,2h8c1.1,0,2-0.9,2-2V7H6V19z M18,4h-2.5l-0.71-0.71C14.61,3.11,14.35,3,14.09,3H9.91 c-0.26,0-0.52,0.11-0.7,0.29L8.5,4H6C5.45,4,5,4.45,5,5s0.45,1,1,1h12c0.55,0,1-0.45,1-1S18.55,4,18,4z"/></g></svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 
   <!-- Modais -->
@@ -64,22 +228,22 @@
         <div class="modal-body bg-dark">
           <h5 class="card-title text-white">Nova senha</h5>
           <label for="recipient-name" class="col-form-label text-light">Usuario:</label>
-          <input id="new_pass_user" type="text" class="form-control mb-1" placeholder="Digite o nome de usuario" aria-label="Usuário"
-            aria-describedby="basic-addon1">
-            <label for="recipient-name" class="col-form-label text-light">Senha:</label>
-          <input id="new_pass_pass" type="text" class="form-control mb-1" placeholder="Digite a senha ou gere uma abaixo" aria-label="Senha"
-            aria-describedby="basic-addon1">
+          <input id="new_pass_user" type="text" class="form-control mb-1" placeholder="Digite o nome de usuario"
+            aria-label="Usuário" aria-describedby="basic-addon1">
+          <label for="recipient-name" class="col-form-label text-light">Senha:</label>
+          <input id="new_pass_pass" type="text" class="form-control mb-1"
+            placeholder="Digite a senha ou gere uma abaixo" aria-label="Senha" aria-describedby="basic-addon1">
           <div class="input-group mb-1">
-            <input type="number" class="form-control" placeholder="Tamanho da senha maximo: 40" aria-label="Tamanho da senha   Max: 40"
-              aria-describedby="button-addon2" min="1" max="40" id="pass_lenght">
+            <input type="number" class="form-control" placeholder="Tamanho da senha maximo: 40"
+              aria-label="Tamanho da senha   Max: 40" aria-describedby="button-addon2" min="1" max="40"
+              id="pass_lenght">
             <div class="input-group-append">
               <button class="btn btn-secundary" type="button" onclick="gen_password()">Gerar</button>
             </div>
           </div>
           <label for="recipient-name" class="col-form-label text-light">Nome da aplicação:</label>
-          <input type="text" class="form-control mb-1"
-            placeholder="Ex: Youtube, Google, EpcGames, etc." id="new_pass_local"
-            aria-describedby="basic-addon3">
+          <input type="text" class="form-control mb-1" placeholder="Ex: Youtube, Google, EpcGames, etc."
+            id="new_pass_local" aria-describedby="basic-addon3">
           <div id="new_pass_alerts">
 
           </div>
@@ -90,7 +254,10 @@
   </div>
 
   <!-- Scripts -->
-  <script src="./src/js/jquery.min.js"></script>
+  <script>
+    window.$ = window.jQuery = require("jquery")
+  </script>
+  <script src="./src/js/king_pass_control.js"></script>
   <script src="./src/js/bootstrap.min.js"></script>
   <script src="./src/js/popper.min.js"></script>
   <script src="./src/js/aes.js"></script>

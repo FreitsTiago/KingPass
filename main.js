@@ -8,8 +8,13 @@ function createWindow () {
     width: 1120,
     height: 630,
     icon: __dirname + "/icon.png",
+    frame: false,
+    transparent: true,
+    maximizable: false,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      nodeIntegrationInWorker: true,
+      enableRemoteModule: true
   }
   })
 

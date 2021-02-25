@@ -1,0 +1,22 @@
+.bg-king{
+    background-color: #303030;
+}
+
+.bg-card{
+    background-color: #505050;
+}
+
+.bg-KING{
+    background-color: #303030;
+    background-image: url('../img/background.jpg');
+}
+
+.text-black{
+    color: black;
+}
+
+.forms_center{
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
