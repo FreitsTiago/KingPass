@@ -2,13 +2,14 @@
     background-color: #303030;
 }
 
-.bg-card{
-    background-color: #505050;
+.bg-KING{
+    background-color: #202020e3;
+    
+    /*background-image: url('../img/background.jpg');*/
 }
 
-.bg-KING{
-    background-color: #303030;
-    background-image: url('../img/background.jpg');
+.bg-king_50{
+    background-color: #505050;
 }
 
 .text-black{
