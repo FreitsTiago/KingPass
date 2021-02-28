@@ -34,7 +34,6 @@ if(db.get('OLEvDbiPUr').value() == '' && db.get('w5egoQHoRn').value() == ''){
 
 // Ajusta o tamanho da area dos cartões de senha na tela principal
 window.onresize = function () {
-    console.log('1')
     $('#contein_pass').css({ height: ($(window).height() - ($('#nav_home').height() - $('#alert_zone_home').height()) - 50).toFixed(0), overflow: "auto" });
 };
 
