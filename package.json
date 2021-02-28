@@ -2,9 +2,18 @@
   "name": "KingPass",
   "version": "0.1",
   "description": "Um simples projeto com o objetivo de guardar suas senhas de forma mais segura, usando criptografia",
+  "author": "TiagoFreitas",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
+  },
+  "build": {
+    "appId": "https://portifoliotf.herokuapp.com/",
+    "productName": "KingPass",
+    "copyright": "Copyright © 2021 ${author}",
+    "win": {
+      "icon": "./public/icons/png/256x256.png"
+    }
   },
   "keywords": [
     "Electron",
@@ -13,7 +22,6 @@
     "tutorial",
     "demo"
   ],
-  "author": "TiagoFreitas",
   "devDependencies": {
     "electron": "^11.3.0"
   },
