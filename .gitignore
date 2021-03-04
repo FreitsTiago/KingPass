@@ -1,4 +1,7 @@
 node_modules
 package-lock.json
-/src/img/background.json
-/src/database.json
+packeger.bat
+PACKAGE
+icon_share.ico
+icon_share.png
+icon.ico

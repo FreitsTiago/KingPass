@@ -21,3 +21,12 @@
     max-width: 400px;
     margin: auto;
 }
+
+.empyt_image{
+    width: 450px;
+    height: 100px;
+    position: absolute;
+    left: calc((100% - 450px)/2);
+    bottom: 50%;
+    z-index: 99999999
+  }

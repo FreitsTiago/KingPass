@@ -18,7 +18,7 @@
             class="navbar-brand text-success"><strong>KingPass</strong></a></div>
         <div class="mr-4">
           <div class="btn-group float-right" role="group" aria-label="Exemplo básico">
-            <button type="button" class="btn btn-success" onclick="window_control('minimize')"><svg
+            <button type="button" class="btn btn-success" onclick="window_control('minimize')" title="Minimizar"><svg
                 xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
                 width="20px" height="20px">
                 <g>
@@ -31,9 +31,9 @@
                   </g>
                 </g>
               </svg></button>
-            <button type="button" class="btn btn-warning resize_button" onclick="window_control('resize')"><svg
-                xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
-                width="20px" height="20px">
+            <button type="button" class="btn btn-warning resize_button" onclick="window_control('resize')"
+              title="Maximizar"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                viewBox="0 0 24 24" fill="black" width="20px" height="20px">
                 <g>
                   <path d="M0,0h24v24H0V0z" fill="none" />
                 </g>
@@ -46,7 +46,7 @@
                   </g>
                 </g>
               </svg></button>
-            <button type="button" class="btn btn-danger" onclick="window_control('close')"><svg
+            <button type="button" class="btn btn-danger" onclick="window_control('close')" title="Fechar"><svg
                 xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
                 width="20px" height="20px">
                 <g>
@@ -61,13 +61,24 @@
               </svg></button>
           </div>
           <button type="button" class="btn btn-success float-right mr-2 text-black"
-            onclick="export_pass()">Importar</button>
+            onclick="modal('open','info_modal')"><svg xmlns="http://www.w3.org/2000/svg"
+              enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="20px" height="20px">
+              <g>
+                <path d="M0,0h24v24H0V0z" fill="none" />
+              </g>
+              <g>
+                <path
+                  d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,17c-0.55,0-1-0.45-1-1v-4c0-0.55,0.45-1,1-1 s1,0.45,1,1v4C13,16.55,12.55,17,12,17z M12,9L12,9c-0.55,0-1-0.45-1-1v0c0-0.55,0.45-1,1-1h0c0.55,0,1,0.45,1,1v0 C13,8.55,12.55,9,12,9z" />
+              </g>
+            </svg></button>
+          <button type="button" class="btn btn-success float-right mr-2 text-black" onclick="import_pass('import')"
+            title="Importar um arquivo de senhas .kgp">Importar</button>
         </div>
       </div>
     </div>
     <!-- Caixa de registro de senha -->
     <div class="shadow-lg p-2 bg-king rounded forms_center text-center">
-      <img class="mb-1" src="./icon.png" alt="" width="72" height="72">
+      <img class="mb-1" src="./src/img/icon.png" alt="" width="72" height="72">
       <h3 class="text-success">KingPass</h3>
       <p align="justify" class="text-light">Seja bem vindo ao KingPass, aqui você irá registrar uma senha de segurança
         para seu app, nunca esqueça esta senha, pois sem ela você não tem acesso a suas senhas salvas aqui!</p>
@@ -89,7 +100,7 @@
             class="navbar-brand text-success"><strong>KingPass</strong></a></div>
         <div class="mr-4">
           <div class="btn-group float-right" role="group" aria-label="Exemplo básico">
-            <button type="button" class="btn btn-success" onclick="window_control('minimize')"><svg
+            <button type="button" class="btn btn-success" onclick="window_control('minimize')" title="Minimizar"><svg
                 xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
                 width="20px" height="20px">
                 <g>
@@ -102,9 +113,9 @@
                   </g>
                 </g>
               </svg></button>
-            <button type="button" class="btn btn-warning resize_button" onclick="window_control('resize')"><svg
-                xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
-                width="20px" height="20px">
+            <button type="button" class="btn btn-warning resize_button" onclick="window_control('resize')"
+              title="Maximizar"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                viewBox="0 0 24 24" fill="black" width="20px" height="20px">
                 <g>
                   <path d="M0,0h24v24H0V0z" fill="none" />
                 </g>
@@ -117,7 +128,7 @@
                   </g>
                 </g>
               </svg></button>
-            <button type="button" class="btn btn-danger" onclick="window_control('close')"><svg
+            <button type="button" class="btn btn-danger" onclick="window_control('close')" title="Fechar"><svg
                 xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
                 width="20px" height="20px">
                 <g>
@@ -131,12 +142,25 @@
                 </g>
               </svg></button>
           </div>
+          <button type="button" class="btn btn-success float-right mr-2 text-black"
+            onclick="modal('open','info_modal')"><svg xmlns="http://www.w3.org/2000/svg"
+              enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="20px" height="20px">
+              <g>
+                <path d="M0,0h24v24H0V0z" fill="none" />
+              </g>
+              <g>
+                <path
+                  d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,17c-0.55,0-1-0.45-1-1v-4c0-0.55,0.45-1,1-1 s1,0.45,1,1v4C13,16.55,12.55,17,12,17z M12,9L12,9c-0.55,0-1-0.45-1-1v0c0-0.55,0.45-1,1-1h0c0.55,0,1,0.45,1,1v0 C13,8.55,12.55,9,12,9z" />
+              </g>
+            </svg></button>
+          <button type="button" class="btn btn-success float-right mr-2 text-black"
+            onclick="import_pass('modal_create')" title="Importar um arquivo de senhas .kgp">Importar</button>
         </div>
       </div>
     </div>
     <!-- Caixa de login -->
     <div class="shadow-lg p-2 bg-king rounded forms_center text-center">
-      <img class="mb-1" src="./icon.png" alt="" width="72" height="72">
+      <img class="mb-1" src="./src/img/icon.png" alt="" width="72" height="72">
       <h3 class="text-success">KingPass</h3>
       <input type="text" class="form-control mt-5" placeholder="Digite sua senha" aria-label="Digite sua senha"
         aria-describedby="basic-addon1" id="pass_login">
@@ -154,7 +178,7 @@
             class="navbar-brand text-success"><strong>KingPass</strong></a></div>
         <div class="mr-4">
           <div class="btn-group float-right" role="group" aria-label="Exemplo básico">
-            <button type="button" class="btn btn-success" onclick="window_control('minimize')"><svg
+            <button type="button" class="btn btn-success" onclick="window_control('minimize')" title="Minimizar"><svg
                 xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
                 width="20px" height="20px">
                 <g>
@@ -167,9 +191,9 @@
                   </g>
                 </g>
               </svg></button>
-            <button type="button" class="btn btn-warning resize_button" onclick="window_control('resize')"><svg
-                xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
-                width="20px" height="20px">
+            <button type="button" class="btn btn-warning resize_button" onclick="window_control('resize')"
+              title="Maximizar"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                viewBox="0 0 24 24" fill="black" width="20px" height="20px">
                 <g>
                   <path d="M0,0h24v24H0V0z" fill="none" />
                 </g>
@@ -182,7 +206,7 @@
                   </g>
                 </g>
               </svg></button>
-            <button type="button" class="btn btn-danger" onclick="window_control('close')"><svg
+            <button type="button" class="btn btn-danger" onclick="window_control('close')" title="Fechar"><svg
                 xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black"
                 width="20px" height="20px">
                 <g>
@@ -197,10 +221,24 @@
               </svg></button>
           </div>
           <button type="button" class="btn btn-success float-right mr-2 text-black"
-            onclick="modal('open','new_pass_modal'); $('#new_pass_local').select()">Nova
-            senha</button>
+            onclick="modal('open','info_modal')"><svg xmlns="http://www.w3.org/2000/svg"
+              enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="20px" height="20px">
+              <g>
+                <path d="M0,0h24v24H0V0z" fill="none" />
+              </g>
+              <g>
+                <path
+                  d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,17c-0.55,0-1-0.45-1-1v-4c0-0.55,0.45-1,1-1 s1,0.45,1,1v4C13,16.55,12.55,17,12,17z M12,9L12,9c-0.55,0-1-0.45-1-1v0c0-0.55,0.45-1,1-1h0c0.55,0,1,0.45,1,1v0 C13,8.55,12.55,9,12,9z" />
+              </g>
+            </svg></button>
           <button type="button" class="btn btn-success float-right mr-2 text-black"
-            onclick="export_pass()">Exportar</button>
+            onclick="modal('open','new_pass_modal'); $('#new_pass_local').select()"
+            title="Cadastrar uma nova senha">Nova
+            senha</button>
+          <button type="button" class="btn btn-success float-right mr-2 text-black" onclick="export_pass()"
+            title="Exportar um arquivo de senhas .kgp">Exportar</button>
+          <button type="button" class="btn btn-success float-right mr-2 text-black"
+            onclick="import_pass('modal_create')" title="Importar um arquivo de senhas .kgp">Importar</button>
         </div>
       </div>
     </div>
@@ -216,6 +254,12 @@
 
         </div>
       </div>
+    </div>
+
+    <!-- Conteudo idicativo de sem senhas -->
+    <div class="empyt_image text-center" id="empyt_image" hidden>
+      <h4 class="text-white">Você ainda não tem senhas! <br>Clique em <strong class="text-success">Nova senha</strong>
+        para criar uma!</h4>
     </div>
   </div>
 
@@ -262,7 +306,8 @@
             </div>
 
             <button type="button" class="btn btn-secondary w-100"
-              onclick="gen_password('new_pass_pass','new_pass_checkbox_','new_pass_length')">Gerar</button>
+              onclick="gen_password('new_pass_pass','new_pass_checkbox_','new_pass_length')"
+              title="Gerar uma senha">Gerar</button>
           </div>
 
           <div id="new_pass_alerts">
@@ -271,6 +316,24 @@
           <button type="button" class="btn btn-success" onclick="New_Password()">Salvar</button>
           <button type="button" class="btn btn-secondary"
             onclick="modal('close','new_pass_modal'); $('#pass_lenght').val(''); $('#new_pass_user').val(''); $('#new_pass_pass').val(''); $('#new_pass_local').val(''); $('#new_pass_alerts').html(''); $('#new_pass_length').val('8'); $('#new_pass_length_display').html('8')">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de irfomações da aplicação -->
+  <div id="info_modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded">
+        <div class="modal-body bg-king">
+          <div class="text-center">
+            <h2 class="card-title text-success" style="cursor: default;">KingPass</h2>
+            <img class="mb-1" src="./src/img/icon.png" alt="" width="150" height="150">
+          </div>
+          <p class="text-white m-0" style="cursor: default;"><strong>Autor:</strong> <a class="text-success" onclick="shell.openExternal('https://portifoliotf.herokuapp.com/')" style="cursor: pointer;">TiagoFreitas</a></p>
+          <p class="text-white m-0" style="cursor: default;"><strong>Versão do aplicativo:</strong> 1.0</p>
+          <p class="text-white m-0 mb-2" style="cursor: default;">Copyright © 2021 - <a class="text-white" onclick="shell.openExternal('https://portifoliotf.herokuapp.com/')" style="cursor: pointer;">TiagoFreitas</a></p>
+          <button type="button" class="btn btn-secondary" onclick="modal('close','info_modal')">Fechar</button>
         </div>
       </div>
     </div>

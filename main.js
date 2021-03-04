@@ -10,7 +10,7 @@ function createWindow () {
     height: 630,
     minWidth: 950,
     minHeight: 630,
-    icon: __dirname + "/icon.png",
+    icon: __dirname + "/src/img/icon_nbar.png",
     frame: false,
     transparent: true,
     maximizable: false,
@@ -26,7 +26,7 @@ function createWindow () {
   mainWindow.loadFile('index.html')
 
   // Open the DevTools.
- // mainWindow.webContents.openDevTools()
+  //mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
@@ -48,6 +48,5 @@ app.whenReady().then(() => {
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
 })
-
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
